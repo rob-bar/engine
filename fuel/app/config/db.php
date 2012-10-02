@@ -12,15 +12,21 @@ return array(
 	 * Base config, just need to set the DSN, username and password in env. config.
 	 */
 	'default' => array(
-		'type'        => 'pdo',
-		'connection'  => array(
-			'persistent' => false,
+		'type'        => 'mysqli',
+		'connection'     => array(
+			'hostname'       => '127.0.0.1',
+			'port'           => '3306',
+			'database'       => 'thezoo',
+			'username'       => 'root',
+			'password'       => 'root',
+			'persistent'     => false,
+			'compress'			=> true
 		),
 		'identifier'   => '`',
 		'table_prefix' => '',
 		'charset'      => 'utf8',
 		'enable_cache' => true,
-		'profiling'    => false,
+		'profiling'    => true,
 	),
 
 	'redis' => array(

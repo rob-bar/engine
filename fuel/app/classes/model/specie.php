@@ -1,12 +1,13 @@
 <?php
+use Orm\Model;
 
-class Model_Specie extends \Orm\Model
+class Model_Specie extends Model
 {
 	protected static $_properties = array(
 		'id',
 		'name',
 		'created_at',
-		'updated_at'
+		'updated_at',
 	);
 
 	protected static $_observers = array(
@@ -19,4 +20,13 @@ class Model_Specie extends \Orm\Model
 			'mysql_timestamp' => false,
 		),
 	);
+
+	public static function validate($factory)
+	{
+		$val = Validation::forge($factory);
+		$val->add_field('name', 'Name', 'required|max_length[255]');
+
+		return $val;
+	}
+
 }

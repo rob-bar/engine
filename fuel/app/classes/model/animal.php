@@ -1,6 +1,7 @@
 <?php
+use Orm\Model;
 
-class Model_Animal extends \Orm\Model
+class Model_Animal extends Model
 {
 	protected static $_properties = array(
 		'id',
@@ -9,7 +10,7 @@ class Model_Animal extends \Orm\Model
 		'specie_id',
 		'enclosure_id',
 		'created_at',
-		'updated_at'
+		'updated_at',
 	);
 
 	protected static $_observers = array(
@@ -22,4 +23,16 @@ class Model_Animal extends \Orm\Model
 			'mysql_timestamp' => false,
 		),
 	);
+
+	public static function validate($factory)
+	{
+		$val = Validation::forge($factory);
+		$val->add_field('name', 'Name', 'required|max_length[255]');
+		$val->add_field('kind', 'Kind', 'required|max_length[255]');
+		$val->add_field('specie_id', 'Specie Id', 'required|valid_string[numeric]');
+		$val->add_field('enclosure_id', 'Enclosure Id', 'required|valid_string[numeric]');
+
+		return $val;
+	}
+
 }
