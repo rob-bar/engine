@@ -34,22 +34,8 @@
 				<h2>Enclosures</h2>
 				<?php echo Html::anchor('enclosure', 'View enclosures', array('id' => 'a1', 'class' => 'btn btn-primary btn-large'));?>
 			</div>
-
 		</div>
-		<div class="row extra">
-			<div class="span4">
-				<h2>Enclosures</h2>
-				<?php echo Html::anchor('enclosure', 'View enclosures', array('id' => 'a1', 'class' => 'btn btn-primary btn-large'));?>
-			</div>
-			<div class="span4">
-				<h2>Enclosures</h2>
-				<?php echo Html::anchor('enclosure', 'View enclosures', array('id' => 'a1', 'class' => 'btn btn-primary btn-large'));?>
-			</div>
-			<div class="span4">
-				<h2>Enclosures</h2>
-				<?php echo Html::anchor('enclosure', 'View enclosures', array('id' => 'a1', 'class' => 'btn btn-primary btn-large'));?>
-			</div>
-		</div>
+		
 		<hr/>
 		<footer>
 			<p class="pull-right">Page rendered in {exec_time}s using {mem_usage}mb of memory.</p>

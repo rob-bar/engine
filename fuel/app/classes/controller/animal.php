@@ -16,18 +16,15 @@ class Controller_Animal extends Controller_Template
 		);
 
 		Pagination::set_config($config);
-		
-		$data['pagination'] = Pagination::create_links();
-		
+				
 		$data['animals'] = Model_Animal::find('all', array(
 			'limit' => Pagination::$per_page,
 			'offset' => Pagination::$offset,
 		));
 		
 		$data['pagination'] = Pagination::create_links();
-		
 		$this->template->title = "Animals";
-		$this->template->content = View::forge('animal/index', $data,false);
+		$this->template->content = View::forge('animal/index', $data, false);
 
 	}
 
