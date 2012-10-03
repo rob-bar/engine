@@ -19,11 +19,11 @@
 		</div>
 		<div class="clearfix">
 			<?php echo Form::label('Specie', 'specie_id'); ?>
-			<?php echo Form::select('specie_id', $animal->specie_id, $species);?>
+			<?php echo Form::select('specie_id', isset($animal) ? $animal->specie_id : 'none', $species);?>
 		</div>
 		<div class="clearfix">
 			<?php echo Form::label('Enclosure', 'enclosure_id'); ?>
-			<?php echo Form::select('enclosure_id', $animal->enclosure_id, $enclosures);?>
+			<?php echo Form::select('enclosure_id', isset($animal) ? $animal->enclosure_id : 'none', $enclosures);?>
 		</div>
 		<div class="actions">
 			<?php echo Form::submit('submit', 'Save', array('class' => 'btn btn-primary')); ?>

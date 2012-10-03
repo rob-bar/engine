@@ -6,6 +6,8 @@
 		<tr>
 			<th>Name</th>
 			<th>Size</th>
+			<th>Residents</th>
+			<th>Animals</th>
 			<th>Extra</th>
 			<th></th>
 		</tr>
@@ -15,6 +17,12 @@
 
 			<td><?php echo $enclosure->name; ?></td>
 			<td><?php echo $enclosure->size; ?></td>
+			<td> <?php echo(count($enclosure->animals));?> </td>
+			<td>
+				<?php foreach ($enclosure->animals as $animal): ?>
+					<?php echo($animal->name);?>, 
+				<?php endforeach; ?>
+			</td>
 			<td><?php echo $enclosure->extra; ?></td>
 			<td>
 				<?php echo Html::anchor('enclosure/view/'.$enclosure->id, 'View'); ?> |

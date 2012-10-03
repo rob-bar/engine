@@ -7,11 +7,11 @@
 	<strong>Kind:</strong>
 	<?php echo $animal->kind; ?></p>
 <p>
-	<strong>Specie id:</strong>
-	<?php echo $animal->specie; ?></p>
+	<strong>Specie:</strong>
+	<?php echo $animal->specie->name; ?></p>
 <p>
-	<strong>Enclosure id:</strong>
-	<?php echo $animal->enclosure; ?></p>
+	<strong>Enclosed in:</strong>
+	<?php echo $animal->enclosure->name; ?></p>
 
 <?php echo Html::anchor('animal/edit/'.$animal->id, 'Edit'); ?> |
 <?php echo Html::anchor('animal', 'Back'); ?>

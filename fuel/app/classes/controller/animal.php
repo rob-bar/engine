@@ -4,9 +4,30 @@ class Controller_Animal extends Controller_Template
 
 	public function action_index()
 	{
-		$data['animals'] = Model_Animal::find('all');
+		$config = array(
+		    'pagination_url' => 'animal/index/',
+		    'total_items' => DB::count_records('animals'),
+		    'per_page' => 10,
+		    'uri_segment' => 3,
+		    'template' => array(
+		        'wrapper_start' => '<div class="my-pagination" style="margin:30px auto"> ',
+		        'wrapper_end' => ' </div>',
+		    )
+		);
+
+		Pagination::set_config($config);
+		
+		$data['pagination'] = Pagination::create_links();
+		
+		$data['animals'] = Model_Animal::find('all', array(
+			'limit' => Pagination::$per_page,
+			'offset' => Pagination::$offset,
+		));
+		
+		$data['pagination'] = Pagination::create_links();
+		
 		$this->template->title = "Animals";
-		$this->template->content = View::forge('animal/index', $data);
+		$this->template->content = View::forge('animal/index', $data,false);
 
 	}
 

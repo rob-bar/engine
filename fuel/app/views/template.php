@@ -10,6 +10,7 @@
 </head>
 <body>
 	<div class="container">
+		<?php echo Html::anchor('/', 'Dashboard', array('id' => 'dash', 'class' => 'btn btn-primary btn-large','style' => 'margin:0 0 30px 0;'));?>
 		<div class="row">
 			<div class="span16">
 				<h1><?php echo $title; ?></h1>

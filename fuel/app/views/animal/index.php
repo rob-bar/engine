@@ -26,7 +26,7 @@
 		</tr>
 <?php endforeach; ?>	</tbody>
 </table>
-
+<?php echo($pagination);?>
 <?php else: ?>
 <p>No Animals.</p>
 

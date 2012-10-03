@@ -4,7 +4,7 @@ class Controller_Enclosure extends Controller_Template
 
 	public function action_index()
 	{
-		$data['enclosures'] = Model_Enclosure::find('all',array("related"=> array("animals")));
+		$data['enclosures'] = Model_Enclosure::find('all', array("related"=> array("animals")));
 		$this->template->title = "Enclosures";
 		$this->template->content = View::forge('enclosure/index', $data);
 
