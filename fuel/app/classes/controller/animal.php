@@ -26,13 +26,23 @@ class Controller_Animal extends Controller_Template
 		$data = array();
 		$views = array();
 		
-		$select = array();
+		$select_species = array();
+		$select_enclosures = array();
 		$species = Model_Specie::find('all');
-		$select['-'] = '- select species -';
+		$enclosures = Model_Enclosure::find('all');
+		$select_species['-'] = '- select species -';
+		$select_enclosures['-'] = '- select enclosure -';
+		
 		foreach($species as $specie) {
-			$select[$specie->id] = $specie->name;
+			$select_species[$specie->id] = $specie->name;
 		}
-		$data['species'] = $select;
+		
+		foreach($enclosures as $enclosure) {
+			$select_enclosures[$enclosure->id] = $enclosure->name;
+		}
+		
+		$data['species'] = $select_species;
+		$data['enclosures'] = $select_enclosures;
 		
 		if (Input::method() == 'POST')
 		{
@@ -74,7 +84,27 @@ class Controller_Animal extends Controller_Template
 	public function action_edit($id = null)
 	{
 		is_null($id) and Response::redirect('Animal');
-
+		$data = array();
+		$views = array();
+		
+		$select_species = array();
+		$select_enclosures = array();
+		$species = Model_Specie::find('all');
+		$enclosures = Model_Enclosure::find('all');
+		$select_species['-'] = '- select species -';
+		$select_enclosures['-'] = '- select enclosure -';
+		
+		foreach($species as $specie) {
+			$select_species[$specie->id] = $specie->name;
+		}
+		
+		foreach($enclosures as $enclosure) {
+			$select_enclosures[$enclosure->id] = $enclosure->name;
+		}
+		
+		$data['species'] = $select_species;
+		$data['enclosures'] = $select_enclosures;
+		
 		$animal = Model_Animal::find($id);
 
 		$val = Model_Animal::validate('edit');
@@ -115,8 +145,8 @@ class Controller_Animal extends Controller_Template
 		}
 
 		$this->template->title = "Animals";
-		$this->template->content = View::forge('animal/edit');
-
+		$views['form'] = View::forge('animal/_form', $data);
+		$this->template->content = View::forge('animal/edit', $views);
 	}
 
 	public function action_delete($id = null)

@@ -6,8 +6,8 @@
 		<tr>
 			<th>Name</th>
 			<th>Kind</th>
-			<th>Specie id</th>
-			<th>Enclosure id</th>
+			<th>Specie</th>
+			<th>Enclosure</th>
 			<th></th>
 		</tr>
 	</thead>
@@ -16,13 +16,12 @@
 
 			<td><?php echo $animal->name; ?></td>
 			<td><?php echo $animal->kind; ?></td>
-			<td><?php echo $animal->specie_id; ?></td>
-			<td><?php echo $animal->enclosure_id; ?></td>
+			<td><?php echo $animal->specie->name; ?></td>
+			<td><?php echo $animal->enclosure->name; ?></td>
 			<td>
 				<?php echo Html::anchor('animal/view/'.$animal->id, 'View'); ?> |
 				<?php echo Html::anchor('animal/edit/'.$animal->id, 'Edit'); ?> |
 				<?php echo Html::anchor('animal/delete/'.$animal->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); ?>
-
 			</td>
 		</tr>
 <?php endforeach; ?>	</tbody>

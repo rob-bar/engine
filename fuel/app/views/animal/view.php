@@ -8,10 +8,10 @@
 	<?php echo $animal->kind; ?></p>
 <p>
 	<strong>Specie id:</strong>
-	<?php echo $animal->specie_id; ?></p>
+	<?php echo $animal->specie; ?></p>
 <p>
 	<strong>Enclosure id:</strong>
-	<?php echo $animal->enclosure_id; ?></p>
+	<?php echo $animal->enclosure; ?></p>
 
 <?php echo Html::anchor('animal/edit/'.$animal->id, 'Edit'); ?> |
 <?php echo Html::anchor('animal', 'Back'); ?>

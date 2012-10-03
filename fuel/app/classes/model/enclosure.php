@@ -1,18 +1,18 @@
 <?php
 use Orm\Model;
 
-class Model_Animal extends Model
+class Model_Enclosure extends Model
 {
 	protected static $_properties = array(
 		'id',
 		'name',
-		'kind',
-		'specie_id',
-		'enclosure_id',
+		'size',
+		'extra',
 		'created_at',
 		'updated_at',
 	);
-	protected static $_belongs_to = array('specie', 'enclosure');
+	
+	protected static $_has_many = array('animals');
 	
 	protected static $_observers = array(
 		'Orm\Observer_CreatedAt' => array(
@@ -29,10 +29,8 @@ class Model_Animal extends Model
 	{
 		$val = Validation::forge($factory);
 		$val->add_field('name', 'Name', 'required|max_length[255]');
-		$val->add_field('kind', 'Kind', 'required|max_length[255]');
-		$val->add_field('specie_id', 'Specie Id', 'required|valid_string[numeric]');
-		$val->add_field('enclosure_id', 'Enclosure Id', 'required|valid_string[numeric]');
-
+		$val->add_field('size', 'Size', 'required|valid_string[numeric]');
+		$val->add_field('extra', 'Extra', 'required');
 		return $val;
 	}
 

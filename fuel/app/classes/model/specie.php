@@ -10,6 +10,8 @@ class Model_Specie extends Model
 		'updated_at',
 	);
 
+	protected static $_has_many = array('animals');
+
 	protected static $_observers = array(
 		'Orm\Observer_CreatedAt' => array(
 			'events' => array('before_insert'),

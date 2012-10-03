@@ -8,6 +8,7 @@ return array(
 			array(
 				0 => '001_create_species',
 				1 => '002_create_animals',
+				2 => '003_create_enclosures',
 			),
 		),
 		'module' => 

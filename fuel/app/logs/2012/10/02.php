@@ -151,3 +151,5 @@ Error - 2012-10-02 08:46:24 --> 8 - Undefined variable: species in /Volumes/data
 Error - 2012-10-02 08:48:00 --> 8 - Undefined variable: data in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/views/animal/create.php on line 4
 Error - 2012-10-02 09:00:26 --> 4096 - Object of class Model_Specie could not be converted to string in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/core/base.php on line 132
 Error - 2012-10-02 09:10:16 --> 1241 - Operand should contain 1 column(s) [ SELECT `t0`.`id` AS `t0_c0`, `t0`.`name` AS `t0_c1`, `t0`.`created_at` AS `t0_c2`, `t0`.`updated_at` AS `t0_c3` FROM `species` AS `t0` WHERE `t0`.`id` = ('id', 'name') LIMIT 1 ] in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/core/classes/database/mysqli/connection.php on line 243
+Error - 2012-10-02 16:03:50 --> Error - Could not find asset: bootstrap.css in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/core/classes/asset/instance.php on line 249
+Error - 2012-10-02 16:05:09 --> Error - Could not find asset: bootstrap.css in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/core/classes/asset/instance.php on line 249
