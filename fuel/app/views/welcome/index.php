@@ -24,18 +24,32 @@
 		<div class="row extra">
 			<div class="span4">
 				<h2>Animals</h2>
-				<?php echo Html::anchor('animal', 'View animals', array('id' => 'a1', 'class' => 'btn btn-primary btn-large'));?>
+				<?php echo Html::anchor('animal', 'Manage animals', array('class' => 'btn btn-primary btn-large'));?>
 			</div>
 			<div class="span4">
 				<h2>Species</h2>
-				<?php echo Html::anchor('specie', 'View species', array('id' => 'a1', 'class' => 'btn btn-primary btn-large'));?>
+				<?php echo Html::anchor('specie', 'Manage species', array('class' => 'btn btn-primary btn-large'));?>
 			</div>
 			<div class="span4">
 				<h2>Enclosures</h2>
-				<?php echo Html::anchor('enclosure', 'View enclosures', array('id' => 'a1', 'class' => 'btn btn-primary btn-large'));?>
+				<?php echo Html::anchor('enclosure', 'Manage enclosures', array('class' => 'btn btn-primary btn-large'));?>
+			</div>
+
+		</div>
+		<div class="row extra">
+			<div class="span4">
+				<h2>Visitors</h2>
+				<?php echo Html::anchor('visitor', 'Manage Visitors', array('class' => 'btn btn-primary btn-large'));?>
+			</div>
+			<div class="span4">
+				<h2>Tourguides</h2>
+				<?php echo Html::anchor('tourguide', 'Manage Tourguides', array('class' => 'btn btn-primary btn-large'));?>
+			</div>
+			<div class="span4">
+				<h2>Tours</h2>
+				<?php echo Html::anchor('tour', 'Manage Tours', array('class' => 'btn btn-primary btn-large'));?>
 			</div>
 		</div>
-		
 		<hr/>
 		<footer>
 			<p class="pull-right">Page rendered in {exec_time}s using {mem_usage}mb of memory.</p>
