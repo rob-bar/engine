@@ -18,12 +18,8 @@
 			</div>
 		</div>
 		<div class="clearfix">
-			<?php echo Form::label('Tour guide id', 'tour_guide_id'); ?>
-
-			<div class="input">
-				<?php echo Form::input('tour_guide_id', Input::post('tour_guide_id', isset($visitor) ? $visitor->tour_guide_id : ''), array('class' => 'span4')); ?>
-
-			</div>
+			<?php echo Form::label('Tourguide', 'tour_guide_id'); ?>
+			<?php echo Form::select('tour_guide_id', isset($visitor) ? $visitor->tour_guide_id : 'none', $tourguides);?>
 		</div>
 		<div class="actions">
 			<?php echo Form::submit('submit', 'Save', array('class' => 'btn btn-primary')); ?>

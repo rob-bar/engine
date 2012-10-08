@@ -23,6 +23,18 @@ class Controller_Visitor extends Controller_Template
 
 	public function action_create()
 	{
+		$data = array();
+		$tourguides_select = array();
+		$tourguides_select['-'] = '- select tourguide -';
+		
+		$tourguides = Model_Tourguide::find('all');
+		
+		foreach($tourguides as $tourguide) {
+			$tourguides_select[$tourguide->id] = $tourguide->name;
+		}
+		
+		$data['tourguides'] = $tourguides_select;
+		
 		if (Input::method() == 'POST')
 		{
 			$val = Model_Visitor::validate('create');
@@ -54,8 +66,8 @@ class Controller_Visitor extends Controller_Template
 		}
 
 		$this->template->title = "Visitors";
-		$this->template->content = View::forge('visitor/create');
-
+		$views['form'] = View::forge('visitor/_form', $data);
+		$this->template->content = View::forge('visitor/create', $views);
 	}
 
 	public function action_edit($id = null)

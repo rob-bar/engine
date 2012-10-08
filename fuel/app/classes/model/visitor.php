@@ -11,7 +11,9 @@ class Model_Visitor extends Model
 		'created_at',
 		'updated_at',
 	);
-
+	
+	protected static $_belongs_to = array('tourguide');
+	
 	protected static $_observers = array(
 		'Orm\Observer_CreatedAt' => array(
 			'events' => array('before_insert'),

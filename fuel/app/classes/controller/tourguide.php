@@ -13,16 +13,23 @@ class Controller_Tourguide extends Controller_Template
 	public function action_view($id = null)
 	{
 		$data['tourguide'] = Model_Tourguide::find($id);
-
 		is_null($id) and Response::redirect('Tourguide');
-
 		$this->template->title = "Tourguide";
 		$this->template->content = View::forge('tourguide/view', $data);
-
 	}
 
 	public function action_create()
 	{
+		$data = array();
+		$select_rank = array();;
+		$select_rank['-'] = '- select tourguide rank -';
+		$select_rank['Normal'] = 'Normal Tourguide';
+		$select_rank['Elite'] = 'Elite Tourguide';
+		$select_rank['Freelance'] = 'Freelance Tourguide';
+		$select_rank['High'] = 'High ranked Tourguide';
+		$select_rank['Highest'] = 'Highest Ranked tourguide';
+		$data['select_rank'] = $select_rank;
+		
 		if (Input::method() == 'POST')
 		{
 			$val = Model_Tourguide::validate('create');
@@ -54,18 +61,26 @@ class Controller_Tourguide extends Controller_Template
 		}
 
 		$this->template->title = "Tourguides";
-		$this->template->content = View::forge('tourguide/create');
-
+		$views['form'] = View::forge('tourguide/_form', $data);
+		$this->template->content = View::forge('tourguide/create', $views);
 	}
 
 	public function action_edit($id = null)
 	{
+		$data = array();
+		$select_rank = array();;
+		$select_rank['-'] = '- select tourguide rank -';
+		$select_rank['Normal'] = 'Normal Tourguide';
+		$select_rank['Elite'] = 'Elite Tourguide';
+		$select_rank['Freelance'] = 'Freelance Tourguide';
+		$select_rank['High'] = 'High ranked Tourguide';
+		$select_rank['Highest'] = 'Highest Ranked tourguide';
+		$data['select_rank'] = $select_rank;
+		
 		is_null($id) and Response::redirect('Tourguide');
-
 		$tourguide = Model_Tourguide::find($id);
-
 		$val = Model_Tourguide::validate('edit');
-
+		
 		if ($val->run())
 		{
 			$tourguide->name = Input::post('name');
@@ -100,7 +115,9 @@ class Controller_Tourguide extends Controller_Template
 		}
 
 		$this->template->title = "Tourguides";
-		$this->template->content = View::forge('tourguide/edit');
+		$views['form'] = View::forge('tourguide/_form', $data);
+		$this->template->content = View::forge('tourguide/edit', $views);
+
 
 	}
 

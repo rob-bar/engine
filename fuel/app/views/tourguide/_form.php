@@ -9,13 +9,10 @@
 
 			</div>
 		</div>
+		
 		<div class="clearfix">
 			<?php echo Form::label('Rank', 'rank'); ?>
-
-			<div class="input">
-				<?php echo Form::input('rank', Input::post('rank', isset($tourguide) ? $tourguide->rank : ''), array('class' => 'span4')); ?>
-
-			</div>
+			<?php echo Form::select('rank', isset($tourguide) ? $tourguide->rank : 'none', $select_rank);?>
 		</div>
 		<div class="clearfix">
 			<?php echo Form::label('Max visitors', 'max_visitors'); ?>
