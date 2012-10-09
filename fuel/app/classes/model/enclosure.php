@@ -13,6 +13,7 @@ class Model_Enclosure extends Model
 	);
 	
 	protected static $_has_many = array('animals');
+	protected static $_many_many = array('tours');
 	
 	protected static $_observers = array(
 		'Orm\Observer_CreatedAt' => array(

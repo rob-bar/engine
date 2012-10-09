@@ -4,7 +4,7 @@ class Controller_Tourguide extends Controller_Template
 
 	public function action_index()
 	{
-		$data['tourguides'] = Model_Tourguide::find('all');
+		$data['tourguides'] = Model_Tourguide::find('all', array('related' => array('visitors')));
 		$this->template->title = "Tourguides";
 		$this->template->content = View::forge('tourguide/index', $data);
 

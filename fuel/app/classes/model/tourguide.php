@@ -12,7 +12,10 @@ class Model_Tourguide extends Model
 		'updated_at',
 	);
 	
-	protected static $_has_many = array('visitors');
+	protected static $_has_many = array('visitors' => array(
+    'key_from' => 'id',
+    'key_to' => 'tour_guide_id',
+));
 	
 	protected static $_observers = array(
 		'Orm\Observer_CreatedAt' => array(

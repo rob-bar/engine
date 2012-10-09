@@ -6,7 +6,7 @@
 		<tr>
 			<th>Name</th>
 			<th>Email</th>
-			<th>Tour guide id</th>
+			<th>Tour guide</th>
 			<th></th>
 		</tr>
 	</thead>
@@ -15,7 +15,7 @@
 
 			<td><?php echo $visitor->name; ?></td>
 			<td><?php echo $visitor->email; ?></td>
-			<td><?php echo $visitor->tour_guide_id; ?></td>
+			<td><?php echo $visitor->tourguide->name; ?></td>
 			<td>
 				<?php echo Html::anchor('visitor/view/'.$visitor->id, 'View'); ?> |
 				<?php echo Html::anchor('visitor/edit/'.$visitor->id, 'Edit'); ?> |

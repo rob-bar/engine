@@ -4,7 +4,7 @@ class Controller_Visitor extends Controller_Template
 
 	public function action_index()
 	{
-		$data['visitors'] = Model_Visitor::find('all');
+		$data['visitors'] = Model_Visitor::find('all', array('related' => array('tourguide')));
 		$this->template->title = "Visitors";
 		$this->template->content = View::forge('visitor/index', $data);
 

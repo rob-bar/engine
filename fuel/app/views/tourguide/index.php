@@ -7,6 +7,7 @@
 			<th>Name</th>
 			<th>Rank</th>
 			<th>Max visitors</th>
+			<th>Visitors in group</th>
 			<th></th>
 		</tr>
 	</thead>
@@ -16,6 +17,11 @@
 			<td><?php echo $tourguide->name; ?></td>
 			<td><?php echo $tourguide->rank; ?></td>
 			<td><?php echo $tourguide->max_visitors; ?></td>
+			<td>
+				<?php foreach ($tourguide->visitors as $visitor): ?>
+					<?php echo($visitor->name);?>, 
+				<?php endforeach; ?>
+			</td>
 			<td>
 				<?php echo Html::anchor('tourguide/view/'.$tourguide->id, 'View'); ?> |
 				<?php echo Html::anchor('tourguide/edit/'.$tourguide->id, 'Edit'); ?> |

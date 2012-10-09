@@ -11,6 +11,8 @@ return array(
 				2 => '003_create_enclosures',
 				3 => '004_create_visitors',
 				4 => '005_create_tourguides',
+				5 => '006_create_tours',
+				6 => '007_create_tour_enclosure',
 			),
 		),
 		'module' => 
