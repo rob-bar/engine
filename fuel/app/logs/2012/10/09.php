@@ -69,3 +69,4 @@ Error - 2012-10-09 08:42:09 --> 8 - Undefined variable: visitors in /Volumes/dat
 Error - 2012-10-09 08:42:22 --> 8 - Undefined variable: visitors in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/views/tour/view.php on line 20
 Error - 2012-10-09 08:43:03 --> Error - Property "size" not found for Model_Visitor. in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/packages/orm/classes/model.php on line 949
 Error - 2012-10-09 08:55:57 --> 4096 - Object of class Model_Specie could not be converted to string in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/views/tour/view.php on line 44
+Error - 2012-10-09 09:23:21 --> Error - Relation "species" was not found in the model. in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/packages/orm/classes/query.php on line 541

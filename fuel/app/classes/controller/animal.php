@@ -20,6 +20,7 @@ class Controller_Animal extends Controller_Template
 		$data['animals'] = Model_Animal::find('all', array(
 			'limit' => Pagination::$per_page,
 			'offset' => Pagination::$offset,
+			"related"=> array("enclosure","specie")
 		));
 		
 		$data['pagination'] = Pagination::create_links();

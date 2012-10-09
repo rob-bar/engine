@@ -41,8 +41,6 @@ class Model_Tour extends Model
 		$val = Validation::forge($factory);
 		$val->add_field('name', 'Name', 'required|max_length[255]');
 		$val->add_field('tour_guide_id', 'Tour Guide Id', 'required|valid_string[numeric]');
-
 		return $val;
 	}
-
 }
