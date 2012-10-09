@@ -18,10 +18,15 @@ class Controller_Tour extends Controller_Template
 
 	public function action_view($id = null)
 	{
-		$data['tour'] = Model_Tour::find($id);
-
+		$tour = Model_Tour::find($id);
 		is_null($id) and Response::redirect('Tour');
-
+		
+		$visitors = Model_Visitor::find('all', array(
+			'where' => array('tour_guide_id' => $tour->tourguide->id)
+		));
+		
+		$data['tour'] = $tour;
+		$data['visitors'] = $visitors;
 		$this->template->title = "Tour";
 		$this->template->content = View::forge('tour/view', $data);
 

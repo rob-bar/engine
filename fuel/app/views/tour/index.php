@@ -18,7 +18,6 @@
 			<td><?php echo $tour->count; ?></td>
 			<td>
 				<?php echo Html::anchor('tour/view/'.$tour->id, 'View'); ?> |
-				<?php echo Html::anchor('tour/edit/'.$tour->id, 'Edit'); ?> |
 				<?php echo Html::anchor('tour/delete/'.$tour->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); ?>
 
 			</td>
