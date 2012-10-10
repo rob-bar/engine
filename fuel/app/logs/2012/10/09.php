@@ -70,3 +70,14 @@ Error - 2012-10-09 08:42:22 --> 8 - Undefined variable: visitors in /Volumes/dat
 Error - 2012-10-09 08:43:03 --> Error - Property "size" not found for Model_Visitor. in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/packages/orm/classes/model.php on line 949
 Error - 2012-10-09 08:55:57 --> 4096 - Object of class Model_Specie could not be converted to string in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/views/tour/view.php on line 44
 Error - 2012-10-09 09:23:21 --> Error - Relation "species" was not found in the model. in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/packages/orm/classes/query.php on line 541
+Error - 2012-10-09 16:35:51 --> Error - Call to undefined method Fuel\Core\Profiler::log() in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/classes/controller/animal.php on line 19
+Error - 2012-10-09 16:36:15 --> Error - Call to undefined method Fuel\Core\Profiler::log() in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/classes/controller/animal.php on line 19
+Error - 2012-10-09 16:37:17 --> Error - Call to undefined method Fuel\Core\Profiler::log() in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/classes/controller/animal.php on line 19
+Error - 2012-10-09 16:37:18 --> Error - Call to undefined method Fuel\Core\Profiler::log() in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/classes/controller/animal.php on line 19
+Error - 2012-10-09 16:37:19 --> Error - Call to undefined method Fuel\Core\Profiler::log() in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/classes/controller/animal.php on line 19
+Error - 2012-10-09 16:37:19 --> Error - Call to undefined method Fuel\Core\Profiler::log() in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/classes/controller/animal.php on line 19
+Error - 2012-10-09 16:37:19 --> Error - Call to undefined method Fuel\Core\Profiler::log() in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/classes/controller/animal.php on line 19
+Error - 2012-10-09 16:39:06 --> Error - Call to undefined method Fuel\Core\Profiler::log() in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/classes/controller/animal.php on line 8
+Error - 2012-10-09 16:43:01 --> Parsing Error - syntax error, unexpected 'echo' (T_ECHO), expecting ')' in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/classes/controller/animal.php on line 19
+Error - 2012-10-09 16:43:46 --> Parsing Error - syntax error, unexpected 'echo' (T_ECHO), expecting ')' in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/classes/controller/animal.php on line 20
+Error - 2012-10-09 16:46:20 --> Error - Call to undefined method Console::error() in /Volumes/data/Users/robbieb/Documents/REPO/prox_fuel/fuel/app/classes/controller/animal.php on line 19

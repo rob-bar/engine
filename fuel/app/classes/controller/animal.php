@@ -4,19 +4,18 @@ class Controller_Animal extends Controller_Template
 
 	public function action_index()
 	{
+		Profiler::mark('start of this piece of code');
 		$config = array(
-		    'pagination_url' => 'animal/index/',
-		    'total_items' => DB::count_records('animals'),
-		    'per_page' => 10,
-		    'uri_segment' => 3,
-		    'template' => array(
-		        'wrapper_start' => '<div class="my-pagination" style="margin:30px auto"> ',
-		        'wrapper_end' => ' </div>',
-		    )
+			'pagination_url' => 'animal/index/',
+			'total_items' => DB::count_records('animals'),
+			'per_page' => 10,
+			'uri_segment' => 3,
+			'template' => array(
+				'wrapper_start' => '<div class="my-pagination" style="margin:30px auto"> ',
+				'wrapper_end' => ' </div>',
+				)
 		);
-
-		Pagination::set_config($config);
-				
+		Console::log('Log your text');
 		$data['animals'] = Model_Animal::find('all', array(
 			'limit' => Pagination::$per_page,
 			'offset' => Pagination::$offset,
