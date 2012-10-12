@@ -1,4 +1,4 @@
-#FuelPHP
+#A copy of the latest FuelPHP
 
 * Version: 1.2
 * [Website](http://fuelphp.com/)
