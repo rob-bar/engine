@@ -11,19 +11,24 @@ ini_set('display_errors', 1);
 define('DOCROOT', __DIR__.DIRECTORY_SEPARATOR);
 
 /**
+ * Website document root
+ */
+define('FUELPATH', realpath(__DIR__ . '/fuel/') . DIRECTORY_SEPARATOR);
+
+/**
  * Path to the application directory.
  */
-define('APPPATH', realpath(__DIR__.'/../fuel/app/').DIRECTORY_SEPARATOR);
+define('APPPATH', FUELPATH . 'app/' . DIRECTORY_SEPARATOR);
 
 /**
  * Path to the default packages directory.
  */
-define('PKGPATH', realpath(__DIR__.'/../fuel/packages/').DIRECTORY_SEPARATOR);
+define('PKGPATH', FUELPATH . 'packages/' . DIRECTORY_SEPARATOR);
 
 /**
  * The path to the framework core.
  */
-define('COREPATH', realpath(__DIR__.'/../fuel/core/').DIRECTORY_SEPARATOR);
+define('COREPATH', FUELPATH . 'core/' . DIRECTORY_SEPARATOR);
 
 // Get the start time and memory for use later
 defined('FUEL_START_TIME') or define('FUEL_START_TIME', microtime(true));
