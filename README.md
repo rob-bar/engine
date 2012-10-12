@@ -1,4 +1,4 @@
-#FuelPHP
+#ProxFuelPHP
 
 * Version: 1.2
 * [Website](http://fuelphp.com/)
