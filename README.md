@@ -3,7 +3,7 @@
 
 ## Description
 
-A fuel php instalation for proximity
+A fuel php installation for proximity
 
 ##Development Team
 
