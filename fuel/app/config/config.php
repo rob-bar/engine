@@ -11,7 +11,12 @@
  */
 
 return array(
-
+	
+	/**
+	 * password_salt - Salt used for hashing passwords
+	 */
+	'password_salt' => 'to_salty_my_friend',
+	
 	/**
 	 * base_url - The base URL of the application.
 	 * MUST contain a trailing slash (/)
