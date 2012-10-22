@@ -6,7 +6,7 @@ class Uri extends \Fuel\Core\Uri {
 	
 	public static function page(){
 		$segs = \Uri::segments();
-		$page = end($segs);
+		$page = array_pop($segs);
 		return $page;
 	}
 }
