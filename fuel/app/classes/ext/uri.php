@@ -1,13 +1,11 @@
 <?php
 class Uri extends \Fuel\Core\Uri {
-	public static function _init() { 
-		// \Debug::dump('MY Uri IS ALIVE!'); 
+	public static function last() {
+		return array_pop(\Uri::segments());
 	}
 	
-	public static function page(){
-		$segs = \Uri::segments();
-		$page = array_pop($segs);
-		return $page;
+	public static function has_segment($needle) {
+		return in_array($needle, \Uri::segments());
 	}
 }
 ?>
