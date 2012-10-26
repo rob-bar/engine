@@ -9,4 +9,3 @@ class Uri extends \Fuel\Core\Uri {
 	}
 }
 ?>
-
