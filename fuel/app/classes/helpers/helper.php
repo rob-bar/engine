@@ -1,7 +1,12 @@
 <?php
-class Helpers_Helper {
-	public static function _init() {
-	}
+namespace Helpers;
+
+class Helper {
+	public static function _init() {}
+
+  public static function get_active($page) {
+    echo Uri::has_segment($page) ? 'active' : ''; 
+  }
 	
 	//GENERATE A KEY IN THIS FORMAT => A69CA6AF-7DBA-D47A-21D8-87641708FECE
 	public static function gen_key() {
