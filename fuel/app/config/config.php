@@ -230,7 +230,8 @@ return array(
 		 * );
 		 */
 		'packages'  => array(
-			//'orm',
+      'orm',
+      'email',
 		),
 
 		/**
@@ -246,7 +247,8 @@ return array(
 		/**
 		 * Classes to autoload & initialize even when not used
 		 */
-		'classes'  => array(),
+    'classes'  => array(
+    ),
 
 		/**
 		 * Configs to autoload
