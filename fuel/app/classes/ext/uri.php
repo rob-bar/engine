@@ -1,6 +1,7 @@
 <?php
 
-class Uri extends \Fuel\Core\Uri {
+class Uri extends \Fuel\Core\Uri 
+{
 	public static function last() {
 		return array_pop(\Uri::segments());
 	}

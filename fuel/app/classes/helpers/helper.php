@@ -1,4 +1,5 @@
 <?php
+
 class Helper {
   /*
    * Returns active when the page correspondences one of the uri segments
@@ -10,4 +11,3 @@ class Helper {
     echo Uri::has_segment($page) ? 'active' : '';
   }
 }
-?>

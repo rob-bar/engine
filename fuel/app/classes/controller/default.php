@@ -4,7 +4,7 @@
  * @package  app
  * @extends  Controller
  */
-class Controller_Default extends Controller_Template
+class Controller_Default extends Controller_Base
 {
   public function before() {
     parent::before();

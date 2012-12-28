@@ -1,6 +1,6 @@
 <?php
   
-class Controller_Default extends Controller_Template
+class Controller_Base extends Controller_Template
 {
   public $template = 'template';
   public $data = array();
