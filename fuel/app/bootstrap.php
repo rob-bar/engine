@@ -34,7 +34,7 @@ if(file_exists(dirname(COREPATH) . '/vendor/autoload.php')) {
 function get_env() {
   $env = 'PRODUCTION'; // default
   $files = array();
-  $envs = array('PRODUCTION', 'STAGE', 'DEVELOPMENT', 'TEST'); // priority order
+  $envs = array('PRODUCTION', 'STAGE', 'TEST', 'DEVELOPMENT'); // priority order
 
   foreach(glob(DOCROOT . '*', GLOB_NOSORT) as $file) {
     $files[] = basename($file);
