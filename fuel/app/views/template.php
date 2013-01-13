@@ -27,12 +27,14 @@
 
     <?= $content; ?>
 
+    <!-- foot scripts -->
     <?= Asset::js(array(
       'vendor/jquery.min.js',
       'lib/tracking.min.js',
       'base.min.js'
     )); ?>
 
+    <!-- GA -->
     <script>
       var _gaq = [['_setAccount','<?= Config::get('ga_code'); ?>'], ['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
