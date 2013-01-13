@@ -1,5 +1,7 @@
 <?php
-class Uri extends \Fuel\Core\Uri {
+
+class Uri extends \Fuel\Core\Uri 
+{
 	public static function last() {
 		return array_pop(\Uri::segments());
 	}
@@ -8,4 +10,3 @@ class Uri extends \Fuel\Core\Uri {
 		return in_array($needle, \Uri::segments());
 	}
 }
-?>

@@ -1,5 +1,7 @@
 <?php
 
+header('P3P: CP="CAO PSA OUR"');
+
 // Load in the Autoloader
 require COREPATH.'classes'.DIRECTORY_SEPARATOR.'autoloader.php';
 class_alias('Fuel\\Core\\Autoloader', 'Autoloader');
@@ -18,6 +20,11 @@ Autoloader::add_classes(array(
 // Register the autoloader
 Autoloader::register();
 
+// Autoloading composer installed packages
+if(file_exists(dirname(COREPATH) . '/vendor/autoload.php')) {
+  require dirname(COREPATH) . '/vendor/autoload.php';
+}
+
 /**
  * Your environment.  Can be set to any of the following:
  *
@@ -26,7 +33,25 @@ Autoloader::register();
  * Fuel::STAGE
  * Fuel::PRODUCTION
  */
-Fuel::$env = (isset($_SERVER['FUEL_ENV']) ? $_SERVER['FUEL_ENV'] : Fuel::DEVELOPMENT);
+function get_env() {
+  $env = 'PRODUCTION'; // default
+  $files = array();
+  $envs = array('PRODUCTION', 'STAGE', 'TEST', 'DEVELOPMENT'); // priority order
+
+  foreach(glob(DOCROOT . '*', GLOB_NOSORT) as $file) {
+    $files[] = basename($file);
+  }
+
+  foreach($envs as $state) {
+    if(in_array($state, $files)) {
+      return strtolower($state);
+    }
+  }
+  
+  return strtolower($env);
+}
+
+Fuel::$env = (isset($_SERVER['FUEL_ENV']) ? $_SERVER['FUEL_ENV'] : get_env());
 
 // Initialize the framework with the config file.
 Fuel::init('config.php');
