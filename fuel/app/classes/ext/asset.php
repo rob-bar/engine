@@ -4,8 +4,8 @@ class Asset extends \Fuel\Core\Asset {
 	 * JS
 	 *
 	 * Either adds the javascript to the group, or returns the script tag.
-	 * When in production mode and configurated with minifies_production_js = true
-	 * this wil search for minified javascript files
+	 * When in production mode and configurated with minifies_production_js => true
+	 * this will search for minified javascript files
 	 *
 	 * @access	public
 	 * @param	mixed	The file name, or an array files.
