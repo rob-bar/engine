@@ -21,7 +21,7 @@
     <?= Asset::css('style.css'); ?>
 
     <!-- head scripts -->
-    <?= Asset::js('vendor/modernizr.min.js'); ?>
+    <?= Asset::js('vendor/modernizr.js'); ?>
   </head>
   <body>
 
@@ -29,9 +29,9 @@
 
     <!-- foot scripts -->
     <?= Asset::js(array(
-      'vendor/jquery.min.js',
-      'lib/tracking.min.js',
-      'base.min.js'
+      'vendor/jquery.js',
+      'lib/tracking.js',
+      'base.js'
     )); ?>
 
     <!-- GA -->
