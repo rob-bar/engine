@@ -4,9 +4,6 @@
 [submodule "fuel/packages/orm"]
 	path = fuel/packages/orm
 	url = git://github.com/fuel/orm.git
-[submodule "fuel/packages/log"]
-	path = fuel/packages/log
-	url = git://github.com/fuel/log.git
 [submodule "fuel/packages/auth"]
 	path = fuel/packages/auth
 	url = git://github.com/fuel/auth.git
@@ -22,3 +19,6 @@
 [submodule "fuel/packages/email"]
 	path = fuel/packages/email
 	url = git://github.com/fuel/email.git
+[submodule "fuel/packages/log"]
+	path = fuel/packages/log
+	url = git://github.com/fuel/log.git
