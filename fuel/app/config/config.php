@@ -3,17 +3,6 @@
 return array(
 
   /**
-   * ga_code - Ga code that gets iported in the template file
-   * SHOULD BE Overridden by the real ga code in production config
-   */
-  'ga_code' => "xxxxxxxxxxxxx",
-
-  /**
-   * minifies_production_js - This setting minifies all js files in production mode
-   */
-  'minifies_production_js' => true,
-
-  /**
    * index_file - The name of the main bootstrap file.
    *
    * Set this to false or remove if you using mod_rewrite.
