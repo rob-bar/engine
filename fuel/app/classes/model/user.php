@@ -24,7 +24,29 @@ class Model_User extends \Orm\Model
       'default' => '',
       'validation' => array('required', 'valid_email')
     ),
+    'tel' => array(
+      'default' => '',
+    ),
+    'street' => array(
+      'default' => '',
+    ),
+    'nbr' => array(
+      'default' => '',
+    ),
+    'box' => array(
+      'default' => '',
+    ),
+    'postalcode' => array(
+      'default' => '',
+    ),
+    'city' => array(
+      'default' => '',
+    ),
+    'country' => array(
+      'default' => '',
+    ),
     'language' => array(
+      'default' => 'nl-BE',
       'validation' => array('required')
     ),
     'fb_id' => array(
