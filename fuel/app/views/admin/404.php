@@ -57,6 +57,9 @@
 
   </div>
 
-  <?= Asset::js(array('vendor/jquery.js', 'vendor/bootstrap.js')); ?>
+  <?= Asset::js(array(
+    'vendor/jquery.js',
+    'vendor/bootstrap.js', 
+  )); ?>
 </body>
 </html>

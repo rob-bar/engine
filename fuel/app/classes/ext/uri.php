@@ -12,7 +12,12 @@ class Uri extends \Fuel\Core\Uri
 
 	public static function segments_clean() {
     $segments = Uri::segments();
-    $uri_keys = array_keys(array_flip(array_splice($segments, 1)));
+
+    if(count($segments) > 0 && is_dir(APPPATH . '/lang/' . $segments[0])) {
+      $segments = array_splice($segments, 1);
+    }
+
+    $uri_keys = array_keys(array_flip($segments));
 
     foreach($uri_keys as $key => $value) {
       if((preg_match('/[A-Za-z]/', $value) && preg_match('/[0-9]/', $value)) || is_numeric($value)) {

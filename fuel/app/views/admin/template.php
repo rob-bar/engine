@@ -78,8 +78,8 @@
     </footer>
   </div>
 
-  <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
   <?= Asset::js(array(
+    'vendor/jquery.js',
     'vendor/bootstrap.js', 
   )); ?>
 </body>

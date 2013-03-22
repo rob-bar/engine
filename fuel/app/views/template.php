@@ -21,8 +21,9 @@
   </head>
   <body data-page="<?= Uri::segments_clean(); ?>">
     <script type="text/javascript">
-      window.lang = '<?= \Session::get('language'); ?>';
-      window.base_url = '<?= Uri::create_lang(''); ?>';
+      window.site = {};
+      window.site.lang = '<?= \Session::get('language'); ?>';
+      window.site.base_url = '<?= Uri::create_lang(''); ?>';
     </script>
 
     <?= $content; ?>
