@@ -48,13 +48,16 @@ return array(
    */
   'security' => array(
     'csrf_autoload'    => true,
-
+    'uri_filter'       => array(),
+    'input_filter'  => array(),
+    'output_filter'  => array(),
     /**
      * With output encoding switched on all objects passed will be converted to strings or
      * throw exceptions unless they are instances of the classes in this array.
      */
     'whitelisted_classes' => array(
     )
+
   ),
 
   /**************************************************************************/
