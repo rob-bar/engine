@@ -30,3 +30,6 @@ TEST
 !fuel/app/*/STAGE
 !fuel/app/*/PRODUCTION
 !fuel/app/*/TEST
+
+composer.lock
+fuel/vendor/
