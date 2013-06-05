@@ -93,7 +93,8 @@ return array(
     'packages'  => array(
       'orm',
       'email',
-      'sentry'
+      'sentry',
+      'parser'
     ),
 
     /**

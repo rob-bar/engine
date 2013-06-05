@@ -1,0 +1,44 @@
+!!! 5
+//if IE 7
+html(class="no-js ie7", lang="{{$lang}}")
+//if IE 8
+html(class="no-js ie8", lang="{{$lang}}")
+//if IE 9
+html(class="no-js ie9", lang="{{$lang}}")
+// [if gt IE 9] <!
+html(class="no-js", lang="{{$lang}}")
+// <![endif]
+head
+	meta(charset='utf-8')
+	meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+	meta(name='description', content="This website is made by BBDO")
+	meta(name='author', content="ProximityBBDO")
+	meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+	title {{$title}}
+
+	link(rel='shortcut icon', href='/img/favicon.png')
+	link(rel='apple-touch-icon', href='/img/apple-touch-icon.png')
+	link(rel='stylesheet', href='/css/style.css')
+	script(src='/js/vendor/modernizr.js')
+
+body(data-page="{{$page}}", data-lang="{{$lang}}")
+	header
+		h1 this is the header
+	nav
+		ul
+			li nav1
+			li nav2
+			li nav3
+
+	div#main {{$content}}
+	footer test
+
+	script(src='/js/vendor/jquery.js')
+	script(src='/js/base.js')
+
+	:javascript
+		| var _gaq = [['_setAccount','{{$GA}}'], ['_trackPageview']];
+		| (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		| g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		| s.parentNode.insertBefore(g,s)}(document,'script'));
