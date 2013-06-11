@@ -15,27 +15,26 @@ head
 	meta(name='author', content="ProximityBBDO")
 	meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
-	title {{$title}}
+	title= $title
 
-	link(rel='shortcut icon', href='/img/favicon.png')
-	link(rel='apple-touch-icon', href='/img/apple-touch-icon.png')
-	link(rel='stylesheet', href='/css/style.css')
-	script(src='/js/vendor/modernizr.js')
+	link(rel='shortcut icon', href='assets/img/favicon.png')
+	link(rel='apple-touch-icon', href='assets/img/apple-touch-icon.png')
+	link(rel='stylesheet', href='assets/css/style.css')
+	script(src='assets/js/vendor/modernizr.js')
 
 body(data-page="{{$page}}", data-lang="{{$lang}}")
 	header
 		h1 this is the header
 	nav
 		ul
-			li nav1
-			li nav2
-			li nav3
+			- foreach($navs as $nav):
+				li= $nav
 
-	div#main {{$content}}
+	div#main= $content
 	footer &copy; 2013
 
-	script(src='/js/vendor/jquery.js')
-	script(src='/js/base.js')
+	script(src='assets/js/vendor/jquery.js')
+	script(src='assets/js/base.js')
 
 	:javascript
 		| var _gaq = [['_setAccount','{{$GA}}'], ['_trackPageview']];

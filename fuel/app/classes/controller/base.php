@@ -9,6 +9,7 @@ class Controller_Base extends Controller_Template {
 		$this->template->lang = "nl-BE";
 		$this->template->title = "first jade template";
 		$this->template->page = "jade";
+		$this->template->navs = array("Home", "links", "pictures");
 		$this->template->GA = "xxxxx";
 	}
 

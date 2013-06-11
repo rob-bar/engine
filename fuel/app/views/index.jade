@@ -1,6 +1,5 @@
-p
-	| Hellow, this is the content from
+p Hellow, this is the content from
 	strong index.jade
-span {{$text}}
+span= $text
 p Even fuel calls
-	strong {{ Config::get('base_url') }}
+	strong= Config::get('base_url')
