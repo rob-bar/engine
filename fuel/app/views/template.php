@@ -13,16 +13,13 @@
 		<link rel="shortcut icon" href="<?= Asset::get_file('favicon.png', 'img', 'icon/'); ?>" />
 		<link rel="apple-touch-icon" href="<?= Asset::get_file('apple-touch-icon.png', 'img', 'icon/'); ?>" />
 		<?= Asset::css('style.css'); ?>
-
-		<?= Asset::js('vendor/modernizr.js'); ?>
 	</head>
 	<body data-page="<?= Uri::last(); ?>">
 
 		<?= $content; ?>
 
 		<?= Asset::js(array(
-			'vendor/jquery.js',
-			'lib/tracking.js',
+			'vendor/zepto.js',
 			'base.js'
 		)); ?>
 
