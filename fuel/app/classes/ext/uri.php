@@ -1,11 +1,12 @@
 <?php
 
-class Uri extends \Fuel\Core\Uri 
+class Uri extends \Fuel\Core\Uri
 {
 	public static function last() {
-		return array_pop(\Uri::segments());
+    $segs = \Uri::segments();
+		return array_pop($segs);
 	}
-	
+
 	public static function has_segment($needle) {
 		return in_array($needle, \Uri::segments());
   }

@@ -1,19 +1,11 @@
 <?php
 
 return array(
-  /**
-   * Admin
-   */
-  'admin' => array(
-    'username' => '',
-    'password' => '',
-    'email' => '',
-  ),
 
   /**
    * Minify setting, functionality can be found in fuel/app/classes/ext/asset.php
    */
-  'minify_js' => false,
+  'minify_js' => true,
 
   /**
    * index_file - The name of the main bootstrap file.
