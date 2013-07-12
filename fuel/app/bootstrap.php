@@ -17,6 +17,7 @@ Autoloader::add_classes(array(
 	'Uri' => APPPATH.'classes/ext/uri.php',
 	'Helper' => APPPATH.'classes/helpers/helper.php',
 	'Response' => APPPATH.'classes/ext/response.php',
+  'FacebookHelpers' => APPPATH.'classes/helpers/facebookhelpers.php',
 ));
 
 // Register the autoloader

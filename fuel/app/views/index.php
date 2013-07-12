@@ -1,6 +1,18 @@
 <header>
+  <div id="langchoise">
+    <?php if (Lang::get_lang() === "nl-be"): ?>
+       <a href="fr-be">FR</a>
+    <?php else: ?>
+      <a href="nl-be">NL</a>
+    <?php endif; ?>
+  </div>
   <?= Asset::img('layout/logo-'. Lang::get_lang() .'.png'); ?>
-  <!-- <iframe width="560" height="315" src="//www.youtube.com/embed/Oa_msGg-oYU?autoplay=1" frameborder="0" allowfullscreen></iframe> -->
+  <?php if (Lang::get_lang() == "nl-BE"): ?>
+     <iframe width="560" height="315" src="//www.youtube.com/embed/Oa_msGg-oYU?autoplay=1" frameborder="0" allowfullscreen></iframe>
+  <?php else: ?>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/0ePRde01Uzs?autoplay=1" frameborder="0" allowfullscreen></iframe>
+  <?php endif; ?>
+
 </header>
 <footer>
 
