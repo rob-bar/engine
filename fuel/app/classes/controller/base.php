@@ -17,22 +17,17 @@ class Controller_Base extends Controller_Template
     if(!$param_lang) {
       if(array_key_exists('signed_request',$_REQUEST)) {
         $signed_request = $_REQUEST['signed_request'];
+
         if($signed_request != null) {
           $parsedReq = FacebookHelpers::parse_signed_request($signed_request,config::get('app_secret'));
+
           if($parsedReq['user']['locale'] != null && substr($parsedReq['user']['locale'], 0,2) == 'fr') {
             $param_lang = 'fr-BE';
           }
-          else {
-            setlocale(LC_ALL, array('dutch,nl_NL'));
-            return;
-          }
         }
       }
-      else {
-        setlocale(LC_ALL, array('dutch,nl_NL'));
-        return;
-      }
-
+    }
+   
     if(!$this->lang_exists($param_lang)) {
       Response::redirect('nl-BE');
     }
@@ -48,7 +43,6 @@ class Controller_Base extends Controller_Template
 
     Config::set('language', $param_lang);
     $this->lang = $param_lang;
-    }
   }
 
   protected function lang_exists($lang) {
@@ -67,5 +61,3 @@ class Controller_Base extends Controller_Template
     }
   }
 }
-
-

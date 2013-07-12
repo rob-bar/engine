@@ -1,6 +1,5 @@
 <header>
   <div id="langchoise">
-    <?php var_dump(Lang::get_lang()); ?>
     <?php if (Lang::get_lang() === "nl-BE"): ?>
        <a href="fr-BE">FR</a>
     <?php else: ?>
