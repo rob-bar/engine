@@ -1,9 +1,10 @@
 <header>
   <div id="langchoise">
-    <?php if (Lang::get_lang() === "nl-be"): ?>
-       <a href="fr-be">FR</a>
+    <?php var_dump(Lang::get_lang()); ?>
+    <?php if (Lang::get_lang() === "nl-BE"): ?>
+       <a href="fr-BE">FR</a>
     <?php else: ?>
-      <a href="nl-be">NL</a>
+      <a href="nl-BE">NL</a>
     <?php endif; ?>
   </div>
   <?= Asset::img('layout/logo-'. Lang::get_lang() .'.png'); ?>
