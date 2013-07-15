@@ -11,7 +11,7 @@
     <meta name="e" content="<?= substr(Fuel::$env, 0, 1); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><?= __('site_title'); ?></title>
+    <title><?= __('title'); ?></title>
 
     <link rel="shortcut icon" href="<?= Asset::get_file('favicon.png', 'img', 'icon/'); ?>" />
     <link rel="apple-touch-icon" href="<?= Asset::get_file('apple-touch-icon.png', 'img', 'icon/'); ?>" />

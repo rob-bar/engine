@@ -10,8 +10,4 @@ return array(
 
   'admin/logout' =>'admin/default/logout',
   'admin/login' => 'admin/default/login',
-
-  // BASE
-  ':lang/(:alnum)' => 'default/index/$2',
-  ':lang' => 'default/index',
 );

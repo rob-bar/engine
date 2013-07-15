@@ -10,9 +10,6 @@ return array(
     'email' => '',
   ),
 
-
-  'app_id' => '292481767563905',
-  'app_secret'  => '112fc32732b465c00f61f777fbae0cbc',
   /**
    * Minify setting, functionality can be found in fuel/app/classes/ext/asset.php
    */
@@ -58,7 +55,7 @@ return array(
    * Fuel::L_INFO
    * Fuel::L_ALL
    */
-  'log_threshold'    => Fuel::L_NONE,
+  'log_threshold'    => Fuel::L_ERROR,
 
   /**
    * Security settings

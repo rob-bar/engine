@@ -4,45 +4,32 @@ class Controller_Base extends Controller_Template
 {
   public $template = 'template';
   public $data = array();
-  public $lang = 'nl-BE';
 
   public function before() {
     parent::before();
 
     $this->set_lang($this->param('lang'));
-    $this->template = View::forge('template');
   }
 
   protected function set_lang($param_lang) {
     if(!$param_lang) {
-      if(array_key_exists('signed_request',$_REQUEST)) {
-        $signed_request = $_REQUEST['signed_request'];
-
-        if($signed_request != null) {
-          $parsedReq = FacebookHelpers::parse_signed_request($signed_request,config::get('app_secret'));
-
-          if($parsedReq['user']['locale'] != null && substr($parsedReq['user']['locale'], 0,2) == 'fr') {
-            $param_lang = 'fr-BE';
-          }
-        }
-      }
+      return;
     }
-   
+
     if(!$this->lang_exists($param_lang)) {
       Response::redirect('nl-BE');
     }
 
     switch($param_lang) {
-      case 'nl-BE':
-        setlocale(LC_ALL, array('dutch,nl_NL'));
-        break;
       case 'fr-BE':
-        setlocale(LC_ALL, array('french,fr_FR'));
+        setlocale(LC_ALL, 'french,fr_FR');
+
         break;
     }
 
-    Config::set('language', $param_lang);
-    $this->lang = $param_lang;
+    Session::set('language', $param_lang);
+
+    Config::set('language', Session::get('language'));
   }
 
   protected function lang_exists($lang) {
