@@ -32,7 +32,7 @@ if(file_exists(dirname(COREPATH) . '/vendor/autoload.php')) {
  *
  * Fuel::DEVELOPMENT
  * Fuel::TEST
- * Fuel::STAGE
+ * Fuel::STAGING
  * Fuel::PRODUCTION
  */
 function get_env() {

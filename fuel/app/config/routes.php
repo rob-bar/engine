@@ -9,5 +9,5 @@ return array(
   'admin' =>'admin/default/index',
 
   'admin/logout' =>'admin/default/logout',
-	'admin/login' => 'admin/default/login',
+  'admin/login' => 'admin/default/login',
 );
