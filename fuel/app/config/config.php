@@ -55,16 +55,16 @@ return array(
    * Fuel::L_INFO
    * Fuel::L_ALL
    */
-  'log_threshold'    => Fuel::L_WARNING,
+  'log_threshold'    => Fuel::L_ERROR,
 
   /**
    * Security settings
    */
   'security' => array(
-    'csrf_autoload'    => true,
-    'uri_filter'       => array(),
-    'input_filter'  => array(),
-    'output_filter'  => array(),
+    'csrf_autoload'   => false,
+    'uri_filter'      => array(),
+    'input_filter'    => array(),
+    'output_filter'   => array(),
     /**
      * With output encoding switched on all objects passed will be converted to strings or
      * throw exceptions unless they are instances of the classes in this array.
