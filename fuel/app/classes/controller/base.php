@@ -1,5 +1,5 @@
 <?php
-  
+
 class Controller_Base extends Controller_Template
 {
   public $template = 'template';
@@ -9,6 +9,23 @@ class Controller_Base extends Controller_Template
     parent::before();
 
     $this->set_lang($this->param('lang'));
+  }
+
+  public function after($response) {
+    if ($response === null) {
+      $response = $this->template;
+    }
+
+    if (! $response instanceof Response) {
+      $response = Response::forge($response);
+      $response->set_header('Content-Type', 'text/html; charset=utf-8');
+
+      if (!is_null(Config::get('facebook', null))) {
+        $response->set_header('P3P','CP="CAO PSA OUR"');
+      }
+    }
+
+    return $response;
   }
 
   protected function set_lang($param_lang) {
