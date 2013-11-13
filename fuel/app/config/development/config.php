@@ -1,6 +1,6 @@
 <?php
 return array(
-  'profiling'  => true,
+  'profiling'  => false,
   'ga_code' => "xxxxxxxxxxxxx",
-  'minify_js' => false,
+  'log_threshold'    => Fuel::L_DEBUG,
 );
