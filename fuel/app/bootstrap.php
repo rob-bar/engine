@@ -1,7 +1,5 @@
 <?php
 
-header('P3P: CP="CAO PSA OUR"');
-
 // Load in the Autoloader
 require COREPATH.'classes'.DIRECTORY_SEPARATOR.'autoloader.php';
 class_alias('Fuel\\Core\\Autoloader', 'Autoloader');
@@ -32,7 +30,7 @@ if(file_exists(dirname(COREPATH) . '/vendor/autoload.php')) {
  *
  * Fuel::DEVELOPMENT
  * Fuel::TEST
- * Fuel::STAGE
+ * Fuel::STAGING
  * Fuel::PRODUCTION
  */
 function get_env() {
