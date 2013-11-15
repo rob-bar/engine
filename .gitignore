@@ -1,5 +1,5 @@
 /composer.lock
-/fuel/vendor
+
 *~
 *.bak
 Thumbs.db
@@ -22,14 +22,14 @@ fuel/app/config/**/migrations.php
 fuel/app/config/crypt.php
 
 DEVELOPMENT
-STAGE
+STAGING
 PRODUCTION
 TEST
 
 !fuel/app/*/DEVELOPMENT
-!fuel/app/*/STAGE
+!fuel/app/*/STAGING
 !fuel/app/*/PRODUCTION
 !fuel/app/*/TEST
 
-composer.lock
-fuel/vendor/
+node_modules
+.sass-cache
